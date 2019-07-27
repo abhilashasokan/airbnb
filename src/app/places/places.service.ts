@@ -88,5 +88,9 @@ export class PlacesService {
   get allOfferedPlaces() {
     return [...this.offeredPlaces];
   }
+
+  getPlaces(id: string) {
+    return { ...this._places.find(p => p.id === id) };
+  }
   constructor() {}
 }
