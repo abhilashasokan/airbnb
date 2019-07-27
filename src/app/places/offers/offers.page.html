@@ -1,9 +1,54 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Offers</ion-title>
+    <ion-title>My Offers</ion-title>
+    <ion-buttons slot="primary" [routerLink]="['/places/tabs/offers/new']" routerLinkActive="router-link-active">
+      <ion-icon name="add" slot="icon-only"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-card>
+          <img [src]="loadedPlaces[0].imageUrl" />
+          <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title>{{ loadedPlaces[0].title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ loadedPlaces[0].description | slice:0:90 }}
+          </ion-card-content>
+          <div center>
+            <ion-button color="primary" fill="clear" routerDirection="forward"
+              [routerLink]="['/places', 'tabs', 'offers',  loadedPlaces[0].id]">
+              More
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-list>
+          <ion-item *ngFor="let place of loadedPlaces.slice(1)" [routerLink]="[
+                  '/',
+                  'places',
+                  'tabs',
+                  'offers',
+                  place.id
+                ]">
+            <ion-thumbnail slot="start">
+              <ion-img [src]="place.imageUrl"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ place.title }}</h2>
+              <p>{{ place.description }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

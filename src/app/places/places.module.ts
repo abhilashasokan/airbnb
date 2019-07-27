@@ -5,11 +5,7 @@ import { PlacesRoutingModule } from './places-routing.module';
 import { PlacesPage } from './places.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    IonicModule,
-    PlacesRoutingModule
-  ],
+  imports: [CommonModule, IonicModule, PlacesRoutingModule],
   declarations: [PlacesPage]
 })
-export class PlacesPageModule { }
+export class PlacesPageModule {}
