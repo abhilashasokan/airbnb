@@ -7,25 +7,25 @@ import { Place } from './model/place.model';
 export class PlacesService {
   private _places: Place[] = [
     new Place(
-      'p1',
-      'Manhattan Mansion',
-      'In the heart of New York City.',
-      'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200',
-      1490.00
+      '1',
+      'Sea Hut Homestay',
+      'Hello everyone Sea hut is a home stay with 4 independent double bed rooms on a common veranda.The room has a king size double bed and an aircon in it. Its a perfect retreat for tourist who want to run away from the hectic city.',
+      'https://a0.muscache.com/im/pictures/24509164/1bf6f65d_original.jpg?aki_policy=xx_large',
+      1490
     ),
     new Place(
-      'p2',
-      "L'Amour Toujours",
-      'A romantic place in Paris!',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris_Night.jpg/1024px-Paris_Night.jpg',
-      1890.00
+      '2',
+      'Coconut Grove',
+      'Situated at the heart of Fort Kochi, Our home is very near to all the tourist attractions in the area.',
+      'https://a0.muscache.com/im/pictures/60503684/4bb7d0cb_original.jpg?aki_policy=xx_large',
+      850
     ),
     new Place(
-      'p3',
-      'The Foggy Palace',
-      'Not your average city trip!',
-      'https://upload.wikimedia.org/wikipedia/commons/0/01/San_Francisco_with_two_bridges_and_the_fog.jpg',
-      990.00
+      '3',
+      'Adams wood house',
+      'its a family run homestay, guesthouse, B & B with clean ensuite rooms, comfortable beds and wifi',
+      'https://a0.muscache.com/im/pictures/1978053/c5862992_original.jpg?aki_policy=xx_large',
+      750.0
     )
   ];
 
@@ -33,5 +33,5 @@ export class PlacesService {
     return [...this._places];
   }
 
-  constructor() { }
+  constructor() {}
 }
