@@ -13,7 +13,7 @@ export class DiscoverPage implements OnInit {
   constructor(private placesService: PlacesService) { }
 
   ngOnInit() {
-    this.loadedPlaces = this.placesService.allPlaces;
+    this.loadedPlaces = this.placesService.places;
   }
 
 }
